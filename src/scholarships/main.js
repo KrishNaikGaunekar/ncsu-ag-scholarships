@@ -16,7 +16,7 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '
 const BASE = import.meta.env.BASE_URL;
 
 // ---------- view state (tab/filter remembered per viewer) ----------
-const VIEW_KEY = 'pawplan.scholarships.view.v1';
+const VIEW_KEY = 'ncsuAgScholarships.view.v1';
 const view = (() => {
   const d = { tab: 'active', q: '', category: 'all', basis: 'all', sort: 'deadline', studentsOnly: false, eligibleOnly: false };
   try { return { ...d, ...JSON.parse(localStorage.getItem(VIEW_KEY) || '{}'), q: '' }; } catch { return d; }
@@ -30,17 +30,14 @@ app.innerHTML = `
   <header>
     <div class="nc-university-bar">
       <strong>NC State University</strong>
-      <nav class="site-nav" aria-label="Paw Plan sections">
-        <a href="https://krishnaikgaunekar.github.io/paw-plan/">Degree Planner</a>
-        <a href="${BASE}" aria-current="page">Scholarships</a>
-      </nav>
+      <span>Unofficial student resource</span>
     </div>
     <div class="brand-header">
       <div class="brand-header-inner">
         <div class="header-brand">
           <img class="brand-badge" src="${BASE}nc-state-abm-badge.png" alt="NC State Agribusiness Management badge" />
           <div>
-            <h1 class="brand-title"><span class="brand-title-main">Paw Plan</span><span class="brand-title-divider">|</span>Scholarships &amp; Grants</h1>
+            <h1 class="brand-title"><span class="brand-title-main">Scholarships &amp; Grants</span></h1>
             <div class="brand-subtitle">College of Agriculture &amp; Life Sciences · NC State University · Funding Dashboard</div>
           </div>
         </div>

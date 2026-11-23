@@ -1,9 +1,9 @@
 // Per-student, per-device state: eligibility checklist ticks, the optional
 // "My profile" used to pre-check criteria, saved (starred) scholarships, the
-// application tracker and private notes. Kept in localStorage only — like the
-// degree planner, nothing a student enters leaves their browser.
+// application tracker and private notes. Kept in localStorage only — nothing a
+// student enters leaves their browser.
 
-const KEY = 'pawplan.scholarships.student.v1';
+const KEY = 'ncsuAgScholarships.student.v1';
 
 function load() {
   try {

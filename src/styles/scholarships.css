@@ -1,4 +1,4 @@
-/* ---------- Scholarships dashboard — same flat NC State skin as the planner ---------- */
+/* ---------- Scholarships dashboard — flat NC State skin ---------- */
 
 .sch-main { max-width: 1280px; }
 
@@ -187,5 +187,4 @@
   .sch-form .form-grid { grid-template-columns: 1fr; }
   .sch-form .span-2, .sch-form .check-inline { grid-column: auto; }
   .sch-tab { padding: .6em .7em; font-size: .8rem; }
-  .site-nav a { padding: 4px 6px; }
 }

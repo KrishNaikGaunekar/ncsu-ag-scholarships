@@ -14,7 +14,7 @@ function nextDay(iso) {
 function event(uid, date, summary, description, url, alarm) {
   return [
     'BEGIN:VEVENT',
-    `UID:${uid}@pawplan`,
+    `UID:${uid}@ncsu-ag-scholarships`,
     `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '')}`,
     `DTSTART;VALUE=DATE:${ymd(date)}`,
     `DTEND;VALUE=DATE:${nextDay(date)}`,
@@ -43,7 +43,7 @@ export function buildIcs(list) {
     if (deadline) events.push(event(`${s.id}-due-${deadline}`, deadline, `DEADLINE: ${s.name}`, desc, s.url, true));
   }
   if (!events.length) return null;
-  return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Paw Plan//Scholarships//EN', 'CALSCALE:GREGORIAN', ...events, 'END:VCALENDAR'].join('\r\n');
+  return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//NCSU Ag Scholarships//Dashboard//EN', 'CALSCALE:GREGORIAN', ...events, 'END:VCALENDAR'].join('\r\n');
 }
 
 export function downloadFile(filename, text, type) {

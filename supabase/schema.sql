@@ -1,4 +1,4 @@
--- Paw Plan · shared scholarship list
+-- NC State Ag Scholarships · shared scholarship list
 -- Run once in the Supabase SQL editor (Dashboard → SQL → New query → paste → Run).
 --
 -- Anyone can READ scholarships. Only signed-in users whose email is in

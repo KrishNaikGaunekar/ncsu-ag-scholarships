@@ -18,8 +18,8 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 export const SHARED_MODE = Boolean(SUPABASE_URL && SUPABASE_KEY);
 
-const LOCAL_KEY = 'pawplan.scholarships.localDraft.v1';
-const LOCAL_EDITOR_KEY = 'pawplan.scholarships.localEditor';
+const LOCAL_KEY = 'ncsuAgScholarships.localDraft.v1';
+const LOCAL_EDITOR_KEY = 'ncsuAgScholarships.localEditor';
 
 let client = null;
 const listeners = new Set();

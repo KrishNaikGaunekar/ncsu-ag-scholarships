@@ -2,7 +2,7 @@
   "name": "ncsu-ag-scholarships",
   "version": "0.1.0",
   "private": true,
-  "description": "Scholarship and grant dashboard for NC State Agribusiness / CALS students (companion to Paw Plan).",
+  "description": "Scholarship and grant dashboard for NC State Agribusiness / CALS students.",
   "type": "module",
   "scripts": {
     "dev": "vite",

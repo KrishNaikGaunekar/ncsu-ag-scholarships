@@ -1,6 +1,6 @@
 # NC State Ag Scholarships
 
-Scholarship and grant dashboard for NC State Agribusiness Management / CALS students — a companion to [Paw Plan](https://github.com/KrishNaikGaunekar/paw-plan).
+Scholarship and grant dashboard for NC State Agribusiness Management / CALS students.
 
 **Live site:** https://krishnaikgaunekar.github.io/ncsu-ag-scholarships/
 
