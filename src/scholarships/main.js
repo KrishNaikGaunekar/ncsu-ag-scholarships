@@ -482,7 +482,18 @@ document.addEventListener('input', (e) => {
 
 // Card-level student actions re-render just that card (see handlers above);
 // profile changes re-render from openProfile.
-dataStore.subscribe(renderAll);
+// On page load, if the Active tab would be empty, open on Upcoming instead so
+// visitors don't land on "nothing here". Only the first load — a tab the viewer
+// clicks afterwards is left alone.
+let landed = false;
+dataStore.subscribe(() => {
+  if (!landed && !dataStore.state.loading) {
+    landed = true;
+    const counts = withStatus().reduce((c, r) => ({ ...c, [r.status]: (c[r.status] || 0) + 1 }), {});
+    if (view.tab === 'active' && !counts.active && counts.upcoming) view.tab = 'upcoming';
+  }
+  renderAll();
+});
 
 renderAll();
 dataStore.init();
