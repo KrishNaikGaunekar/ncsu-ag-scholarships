@@ -1,0 +1,19 @@
+{
+  "name": "ncsu-ag-scholarships",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scholarship and grant dashboard for NC State Agribusiness / CALS students (companion to Paw Plan).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && node scripts/deploy-pages.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
